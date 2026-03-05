@@ -113,6 +113,44 @@
       box-shadow: 0 3px 14px rgba(40,170,200,0.18);
     }
 
+    .pill-tooltip {
+      position: relative;
+      cursor: help;
+    }
+
+    .pill-tooltip .tooltip-text {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(22,46,58,0.93);
+      color: #e8f4f8;
+      font-size: 0.72rem;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+      white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .pill-tooltip .tooltip-text::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: rgba(22,46,58,0.93);
+    }
+
+    .pill-tooltip:hover .tooltip-text {
+      display: block;
+    }
+
     /* ── Body ───────────────────────────────── */
     .body {
       padding: 2.2rem 3rem 2.6rem;
@@ -339,14 +377,14 @@
 
     <header class="header">
       <div class="name">Penn Cameron Porterfield</div>
-      <div class="tagline">Full Stack Developer &amp; Cloud Consultant</div>
+      <div class="tagline">Cloud Engineer &amp; Full Stack Developer</div>
       <nav class="contact">
         <a class="pill" href="mailto:fundlush@proton.me">fundlush@proton.me</a>
         <a class="pill" href="https://pcporterfield.pages.dev" target="_blank" rel="noopener">pcporterfield.pages.dev</a>
         <a class="pill" href="https://github.com/melonmelonz" target="_blank">github/melonmelonz</a>
         <span class="pill">Eastern Time</span>
         <a class="pill" href="resume.html">Resume PDF</a>
-        <span class="pill" title="I don't use LinkedIn — OpSec &amp; privacy reasons">no LinkedIn</span>
+        <span class="pill pill-tooltip">no LinkedIn<span class="tooltip-text">Abandoned for OpSec &amp; privacy reasons — reach out directly instead.</span></span>
       </nav>
     </header>
 
@@ -354,7 +392,7 @@
 
       <section class="section">
         <div class="section-title">Summary</div>
-        <p class="summary">Developer and cloud consultant with 8+ years of full-stack experience spanning agency work, venture-backed startups, indie game development, and independent consulting. Background includes DARPA-funded DoD research, ecommerce, and production web work for Google IO. Currently completing a Network and Cloud Engineering degree at WGU.</p>
+        <p class="summary">Cloud engineer and full-stack developer with 8+ years of experience across independent consulting, agency work, and venture-backed startups. Focused on cloud infrastructure, DevOps, and full-stack delivery on AWS, GCP, and Azure. Background includes DARPA-funded DoD research, ecommerce, and production work for Google IO. Currently completing a B.S. in Network and Cloud Engineering at WGU.</p>
       </section>
 
       <section class="section">
@@ -372,8 +410,8 @@
         <div class="job">
           <div class="job-left">
             <div class="job-company">Left Field Labs <span class="job-sub">&mdash; Google IO</span></div>
-            <div class="job-role">Full Stack Developer (Contract)</div>
-            <div class="job-desc">Contract developer on the Google IO team. Headless Preact setup leveraging Jinja + Python, Tailwind CSS, multiple live pages shipped to production.</div>
+            <div class="job-role">Full Stack Developer &mdash; Contract via g2i</div>
+            <div class="job-desc">Placed via g2i with Left Field Labs on the Google IO conference team. Headless Preact leveraging Jinja + Python, Tailwind CSS, multiple live pages shipped to production.</div>
           </div>
           <div class="job-dates">2021 &ndash; 2022</div>
         </div>
@@ -481,9 +519,12 @@
           <span class="tag">Linux</span>
           <span class="tag">Bash</span>
           <span class="tag">Cloud Infrastructure</span>
+          <span class="tag">AWS</span>
+          <span class="tag">GCP</span>
           <span class="tag">Azure</span>
           <span class="tag">Cloudflare</span>
           <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
           <span class="tag">CI/CD</span>
           <span class="tag">DNS / Networking</span>
           <span class="tag">S3 / Object Storage</span>
