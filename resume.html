@@ -32,7 +32,7 @@
     @media screen {
       body { min-height: 100vh; display: flex; justify-content: center; align-items: flex-start; }
       .page {
-        width: 8.27in;
+        width: min(8.27in, 100%);
         min-height: 11in;
         background: #fff;
         border: 1px solid rgba(52,184,203,0.22);
@@ -40,6 +40,16 @@
         box-shadow: 0 8px 40px rgba(40,150,175,0.14), 0 1px 6px rgba(40,160,185,0.08);
         overflow: hidden;
       }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 640px) {
+      body { padding: 0; background: #fff; }
+      .page { min-height: unset; border-radius: 0; border: none; box-shadow: none; }
+      .columns { grid-template-columns: 1fr; }
+      .sidebar { border-right: none; border-bottom: 1px solid rgba(52,184,203,0.14); }
+      .r-job-top { flex-direction: column; gap: 0.1rem; }
+      .r-dates { white-space: normal; }
     }
 
     @media print {
@@ -309,17 +319,13 @@
         <div class="r-title">Certifications</div>
 
         <div class="r-edu">
-          <div class="r-edu-school">CompTIA A+ <span class="badge">In Progress</span></div>
+          <div class="r-edu-school">CompTIA A+</div>
         </div>
 
         <div class="r-edu">
-          <div class="r-edu-school">LPI Linux Essentials <span class="badge">In Progress</span></div>
+          <div class="r-edu-school">LPI Linux Essentials</div>
         </div>
 
-        <div class="r-edu">
-          <div class="r-edu-school">Microsoft AZ-900 <span class="badge">In Progress</span></div>
-          <div class="r-edu-meta">Azure Fundamentals</div>
-        </div>
       </div>
 
       <div class="r-section">
@@ -339,8 +345,8 @@
           <span class="r-tag">Bash</span>
           <span class="r-tag">Cloud Infra</span>
           <span class="r-tag">AWS</span>
-          <span class="r-tag">GCP</span>
           <span class="r-tag">Azure</span>
+          <span class="r-tag">GCP</span>
           <span class="r-tag">Cloudflare</span>
           <span class="r-tag">Docker</span>
           <span class="r-tag">Kubernetes</span>
@@ -369,7 +375,7 @@
 
       <div class="r-section">
         <div class="r-title">Summary</div>
-        <p class="r-summary">Cloud engineer and full-stack developer with 8+ years of experience across independent consulting, agency work, and venture-backed startups. Focused on cloud infrastructure, DevOps, and full-stack delivery on AWS, GCP, and Azure. Background includes DARPA-funded DoD research, ecommerce, and production work for Google. Currently completing a B.S. in Network and Cloud Engineering at WGU.</p>
+        <p class="r-summary">Cloud engineer and full-stack developer with 8+ years of experience across independent consulting, agency work, and venture-backed startups. Focused on cloud infrastructure, DevOps, and full-stack delivery on AWS, Azure, and GCP. Background includes DARPA-funded DoD research, ecommerce, and production work for Google. Currently completing a B.S. in Network and Cloud Engineering at WGU.</p>
       </div>
 
       <div class="r-section">
