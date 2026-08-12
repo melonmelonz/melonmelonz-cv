@@ -12,14 +12,15 @@
 
     :root {
       --aqua:        #34b8cb;
+      --aqua-text:   #217582;
       --aqua-light:  #7dd8e8;
-      --teal:        #2096a8;
+      --teal:        #197584;
       --glass:       rgba(255,255,255,0.50);
       --glass-hi:    rgba(255,255,255,0.70);
       --glass-border: rgba(255,255,255,0.72);
       --text-dark:   #162e3a;
       --text-mid:    #3a5a6e;
-      --text-soft:   #6a8a9e;
+      --text-soft:   #556e7e;
     }
 
     body {
@@ -50,12 +51,12 @@
         inset 0 1px 0 rgba(255,255,255,0.85);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      overflow: hidden;
     }
 
     /* ── Header ─────────────────────────────── */
     .header {
       padding: 2.6rem 3rem 2.1rem;
+      border-radius: 26px 26px 0 0;
       border-bottom: 1px solid rgba(255,255,255,0.55);
       background: linear-gradient(180deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.08) 100%);
       position: relative;
@@ -131,9 +132,11 @@
       line-height: 1.5;
       padding: 0.45rem 0.8rem;
       border-radius: 8px;
-      white-space: nowrap;
+      width: max-content;
+      max-width: min(260px, 60vw);
+      text-align: center;
       box-shadow: 0 4px 16px rgba(0,0,0,0.22);
-      z-index: 10;
+      z-index: 30;
       pointer-events: none;
     }
 
@@ -167,7 +170,7 @@
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--aqua);
+      color: var(--aqua-text);
       margin-bottom: 1.1rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid rgba(52,184,203,0.18);
@@ -300,6 +303,7 @@
     /* ── Footer ─────────────────────────────── */
     .footer {
       padding: 0.9rem 3rem;
+      border-radius: 0 0 26px 26px;
       border-top: 1px solid rgba(255,255,255,0.48);
       background: rgba(255,255,255,0.18);
       display: flex;
@@ -381,9 +385,9 @@
       <nav class="contact">
         <a class="pill" href="mailto:fundlush@proton.me">fundlush@proton.me</a>
         <a class="pill" href="https://pcporterfield.pages.dev" target="_blank" rel="noopener">pcporterfield.pages.dev</a>
-        <a class="pill" href="https://github.com/melonmelonz" target="_blank">github/melonmelonz</a>
+        <a class="pill" href="https://github.com/melonmelonz" target="_blank">github.com/melonmelonz</a>
         <span class="pill">Eastern Time</span>
-        <a class="pill" href="resume.html">Resume PDF</a>
+        <a class="pill" href="resume.html">Printable Resume</a>
         <span class="pill pill-tooltip">No LinkedIn<span class="tooltip-text">Abandoned for OpSec &amp; privacy reasons — reach out directly instead.</span></span>
       </nav>
     </header>
@@ -409,9 +413,9 @@
 
         <div class="job">
           <div class="job-left">
-            <div class="job-company">Google IO <span class="job-sub">&mdash; Contract</span></div>
+            <div class="job-company">Google I/O <span class="job-sub">&mdash; Contract</span></div>
             <div class="job-role">Full Stack Developer &mdash; Remote</div>
-            <div class="job-desc">Shipped production pages for Google IO via Left Field Labs. Headless Preact with Jinja/Python and Tailwind CSS.</div>
+            <div class="job-desc">Shipped production pages for Google I/O via Left Field Labs. Headless Preact with Jinja/Python and Tailwind CSS.</div>
           </div>
           <div class="job-dates">2021 &ndash; 2022</div>
         </div>
@@ -420,7 +424,7 @@
           <div class="job-left">
             <div class="job-company">Distributron</div>
             <div class="job-role">Software Developer, Co-founder</div>
-            <div class="job-desc">Alcohol delivery ecommerce startup; reached YCombinator interview. Built with Vue, CSS, HTML, geofencing, and JAMstack architecture.</div>
+            <div class="job-desc">Alcohol delivery ecommerce startup; reached Y Combinator interview. Built with Vue, CSS, HTML, geofencing, and JAMstack architecture.</div>
           </div>
           <div class="job-dates">2020 &ndash; 2021</div>
         </div>
@@ -484,7 +488,7 @@
             <div class="edu-school">CompTIA A+</div>
             <div class="edu-field">Hardware &amp; Software Fundamentals</div>
           </div>
-          <div class="edu-dates">&mdash;</div>
+          <div class="edu-dates"></div>
         </div>
 
         <div class="edu-item">
@@ -492,7 +496,7 @@
             <div class="edu-school">LPI Linux Essentials</div>
             <div class="edu-field">IT Service Management</div>
           </div>
-          <div class="edu-dates">&mdash;</div>
+          <div class="edu-dates"></div>
         </div>
 
 
@@ -538,7 +542,7 @@
     </main>
 
     <footer class="footer">
-      <span>penn cameron porterfield &mdash; 2026</span>
+      <span>Penn Cameron Porterfield &mdash; 2026</span>
       <a href="resume.html">printable resume &darr;</a>
     </footer>
 
