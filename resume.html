@@ -56,7 +56,18 @@
       body { background: #fff; padding: 0; }
       .page { width: 100%; box-shadow: none; border: none; border-radius: 0; }
       .no-print { display: none !important; }
+      .print-footer { display: block !important; }
       @page { margin: 0.45in 0.55in; size: letter; }
+    }
+
+    /* ── Print footer ────────────────────────── */
+    .print-footer {
+      display: none;
+      text-align: center;
+      padding: 0.5rem 1.5rem 0.4rem;
+      font-size: 7pt;
+      color: var(--text-soft);
+      border-top: 1px solid rgba(52,184,203,0.14);
     }
 
     /* ── Print button (screen only) ─────────── */
@@ -305,13 +316,13 @@
 
         <div class="r-edu">
           <div class="r-edu-school">Western Governors University</div>
-          <div class="r-edu-meta">B.S. Network &amp; Cloud Engineering <span class="badge">In Progress</span></div>
+          <div class="r-edu-meta">B.S. Network &amp; Cloud Engineering <span class="badge">In Progress</span> <span class="badge">PASS</span></div>
         </div>
 
         <div class="r-edu">
           <div class="r-edu-school">Penn State University</div>
           <div class="r-edu-meta">Computer Engineering, 3 years</div>
-          <div class="r-edu-dates">2009 &ndash; 2013</div>
+          <div class="r-edu-dates">2011 &ndash; 2013</div>
         </div>
       </div>
 
@@ -339,8 +350,6 @@
           <span class="r-tag">Laravel</span>
           <span class="r-tag">Python</span>
           <span class="r-tag">Tailwind</span>
-          <span class="r-tag">HTML5</span>
-          <span class="r-tag">CSS3</span>
           <span class="r-tag">Linux</span>
           <span class="r-tag">Bash</span>
           <span class="r-tag">Cloud Infra</span>
@@ -355,7 +364,6 @@
           <span class="r-tag">S3 / Object Storage</span>
           <span class="r-tag">Unity</span>
           <span class="r-tag">MATLAB</span>
-          <span class="r-tag">MVC</span>
         </div>
       </div>
 
@@ -405,7 +413,7 @@
             <div class="r-dates">2020 &ndash; 2021</div>
           </div>
           <div class="r-role">Software Developer, Co-founder</div>
-          <div class="r-desc">Alcohol delivery ecommerce startup; reached YCombinator interviews. Vue, HTML/CSS, geofencing, JAMstack.</div>
+          <div class="r-desc">Alcohol delivery ecommerce startup; reached YCombinator interview. Vue, HTML/CSS, geofencing, JAMstack.</div>
         </div>
 
         <div class="r-job">
@@ -449,6 +457,9 @@
     </main>
 
   </div>
+
+  <div class="print-footer">pcporterfield.pages.dev &nbsp;&bull;&nbsp; fundlush@proton.me &nbsp;&bull;&nbsp; github.com/melonmelonz</div>
+
 </div>
 </body>
 </html>
